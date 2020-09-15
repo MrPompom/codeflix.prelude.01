@@ -4,12 +4,11 @@ function lowerCase(str)
   var test = [];
   for (var i = 0; i < str.length; i += 1) 
   {
-    if (str[i] < 'Z' && str[i] > 'A') {
-      test[i] = (str[i].charCodeAt(0) + 32);
+    if (str[i] < 'z' && str[i] > 'a') {
+      test[i] = (str[i].charCodeAt(0) - 32);
     }
-    else {
+    else
     test[i] = str[i].charCodeAt(0);
-}
   }
    test = String.fromCharCode(...test);
    

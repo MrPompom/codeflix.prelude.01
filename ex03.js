@@ -1,12 +1,15 @@
 function length(str)
 {
-    var taille = 0;
-    for (var i = 0; str[i].charCodeAt(0) != -1; i += 1, taille += 1)
+    var t = 0;
+    var test = [];
+    for (var i = 0; ; i += 1)
     {
-        console.log("t");
+        if (str[i] == undefined)
+        break;
+        t += 1;
     }
-    console.log(taille);
+    console.log(t);
 }
 
-length('chOpper');
+length('chOpper est nul');
 length('test');

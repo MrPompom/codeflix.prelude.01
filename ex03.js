@@ -1,14 +1,15 @@
-function length(str)
+function length(src)
 {
-    var t = 0;
-    var test = [];
+    var char_number = 0;
+
     for (var i = 0; ; i += 1)
     {
-        if (str[i] == undefined)
+        if (src[i] == undefined)
         break;
-        t += 1;
+        
+        char_number += 1;
     }
-    console.log(t);
+    console.log(char_number);
 }
 
 length('chOpper est nul');

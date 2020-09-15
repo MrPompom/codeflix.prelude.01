@@ -1,21 +1,21 @@
-function lowerCase(str)
+function upperCase(src)
 {
   // string.charCodeAt()
-  var test = [];
-  for (var i = 0; i < str.length; i += 1) 
-  {
-    if (str[i] < 'z' && str[i] > 'a') {
-      test[i] = (str[i].charCodeAt(0) - 32);
-    }
-    else
-    test[i] = str[i].charCodeAt(0);
-  }
-   test = String.fromCharCode(...test);
-   
+  var str = [];
 
-  console.log(test);
+  for (var i = 0; i < src.length; i += 1) 
+  {
+    if (src[i] < 'z' && src[i] > 'a')
+      str[i] = (src[i].charCodeAt(0) - 32);
+
+    else
+    str[i] = src[i].charCodeAt(0);
+  }
+   str = String.fromCharCode(...str);
+
+  console.log(str);
 }
 
-lowerCase('Chopper');
+upperCase('Chopper');
 
-lowerCase('tony tony');
+upperCase('tony tony');

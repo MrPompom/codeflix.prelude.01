@@ -1,21 +1,24 @@
-function capitalize(str, rest)
+function capitalize(src, lower_rest)
  {
-     var cap = [];
-     if (str[0] < 'z' && str[0] > 'a')
-        cap[0] = (str[0].charCodeAt(0) - 32);
-        else
-        cap[0] = str[0].charCodeAt(0);
-        for (var i = 1; i < str.length; i += 1)
-        {
-            if (str[i] < 'Z' && str[i] > 'A' && rest == true) {
-                cap[i] = (str[i].charCodeAt(0) + 32);
-              }
-              else
-              cap[i] = str[i].charCodeAt(0);
-        }
-        cap = String.fromCharCode(...cap);
+     var str = [];
+     
+     if (src[0] < 'z' && src[0] > 'a')
+        str[0] = (src[0].charCodeAt(0) - 32);
 
-        console.log(cap);
+        else
+        str[0] = src[0].charCodeAt(0);
+
+        for (var i = 1; i < src.length; i += 1)
+        {
+            if (src[i] < 'Z' && src[i] > 'A' && lower_rest == true)
+                str[i] = (src[i].charCodeAt(0) + 32);
+              
+                else
+              str[i] = src[i].charCodeAt(0);
+        }
+        str = String.fromCharCode(...str);
+
+        console.log(str);
  }
 
  capitalize('one Code');

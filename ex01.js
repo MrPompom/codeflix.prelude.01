@@ -1,19 +1,19 @@
-function lowerCase(str)
+function lowerCase(src)
 {
   // string.charCodeAt()
-  var test = [];
-  for (var i = 0; i < str.length; i += 1) 
-  {
-    if (str[i] < 'Z' && str[i] > 'A') {
-      test[i] = (str[i].charCodeAt(0) + 32);
-    }
-    else
-    test[i] = str[i].charCodeAt(0);
-  }
-   test = String.fromCharCode(...test);
-   
+  var str = [];
 
-  console.log(test);
+  for (var i = 0; i < src.length; i += 1) 
+  {
+    if (src[i] < 'Z' && src[i] > 'A')
+      str[i] = (src[i].charCodeAt(0) + 32);
+
+    else
+    str[i] = src[i].charCodeAt(0);
+  }
+   str = String.fromCharCode(...str);
+
+  console.log(str);
 }
 
 lowerCase('Chopper');

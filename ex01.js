@@ -1,7 +1,7 @@
-function lowercase(str)
+function lowerCase(str)
 {
     var test = [];
-    for (var i = 0; i < str.length;i += 1) 
+    for (var i = 0; i < str.length; i += 1) 
     {
         if (str[i] < 'Z' && str[i] > 'A') {
         console.log("1");
@@ -17,5 +17,5 @@ function lowercase(str)
     console.log(test);
 }
 
-lowercase('Chopper');
-lowercase('TONY TONY');
+lowerCase('Chopper');
+lowerCase('TONY TONY');
